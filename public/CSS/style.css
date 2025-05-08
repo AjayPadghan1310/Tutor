@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Navbar Styles */
+nav {
+  width: 100%;
+  background: linear-gradient(120deg, #a6dbf1, #a1d1b1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #555;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #f76c6c;
+}
+
+/* Container Styling */
+/* .container {
+  background: rgb(255, 3, 62);
+  background: linear-gradient(90deg, #ca763a, #134b42);
+  max-width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+} */
+
+h1 {
+  font-size: 2.5rem;
+  color: #f76c6c;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 1rem;
+}
+
+/* Form Styling */
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #f76c6c;
+  outline: none;
+  box-shadow: 0 0 5px rgba(247, 108, 108, 0.5);
+}
+
+form textarea {
+  resize: none;
+  height: 120px;
+}
+
+form button {
+  background: #f76c6c;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+form button:hover {
+  background: #f44336;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+    font-size: 1rem;
+    margin: 0 0.5rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  form input,
+  form textarea,
+  form button {
+    font-size: 0.9rem;
+  }
+}

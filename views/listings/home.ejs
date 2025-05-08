@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Tutor Academy</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        /* background: linear-gradient(120deg, #64ffd3, #c8f6d7); */
+        color: rgb(255, 255, 255);
+        text-align: center;
+      }
+
+      header {
+        padding: 20px 0;
+        margin-top: 1rem;
+        border-radius: 50px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: rgb(0, 0, 0);
+        margin-bottom: 10px;
+      }
+
+      h2 {
+        color: #222;
+      }
+
+      p {
+        font-size: 1.1em;
+        margin-bottom: 20px;
+        color: rgb(0, 0, 0);
+      }
+
+      .form-image-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        margin: 40px auto;
+        max-width: 1200px;
+        padding: 20px;
+        gap: 30px;
+      }
+
+      .form-side {
+        order: 2;
+        flex: 1;
+        min-width: 400px;
+        max-width: 500px;
+      }
+
+      .image-side {
+        order: 1;
+        flex: 1;
+        min-width: 500px;
+        max-width: 600px;
+        display: block;
+      }
+
+      .image-side img {
+        width: 100%;
+        height: auto;
+      }
+
+      .form-container {
+        background: #fdfdfd;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+      }
+
+      .form-title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #333;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      label {
+        font-weight: 500;
+        font-size: 13px;
+        color: #444;
+        margin-bottom: 5px;
+        display: block;
+      }
+
+      .form-control,
+      textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 13px;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-control:focus,
+      textarea:focus {
+        border-color: #4caf50;
+        outline: none;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+      }
+
+      textarea {
+        resize: vertical;
+        height: 100px;
+      }
+
+      .submit-btn,
+      .toggle-btn {
+        padding: 10px 16px;
+        background-color: #e85542;
+        color: white;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .submit-btn:hover,
+      .toggle-btn:hover {
+        background-color: #e00000;
+      }
+
+      .toggle-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .conta {
+        margin: 30px auto;
+        max-width: 100%;
+        padding: 20px;
+        background: rgba(233, 2, 2, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .features {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+      }
+
+      .feature-card {
+        background: rgb(251, 251, 251);
+        color: black;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 260px;
+        height: 260px;
+        text-align: left;
+      }
+
+      @media (max-width: 768px) {
+        .form-image-wrapper {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .form-side,
+        .image-side {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome Dear, <%= user ? user.name : 'Guest' %>!</h1>
+      <p>Your ultimate destination for expert tutoring and academic success.</p>
+    </header>
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+      "
+    >
+      <!-- WhatsApp Link - Left -->
+      <a
+        href="https://wa.me/919689383316"
+        target="_blank"
+        style="text-decoration: none; color: green"
+      >
+        📱 WhatsApp: +91 9689383316
+      </a>
+
+      <!-- Phone Call Link - Right -->
+      <a href="tel:+919689383316" style="text-decoration: none; color: blue">
+        📞 Call: +91 9689383316
+      </a>
+    </div>
+
+    <div class="form-image-wrapper">
+      <div class="image-side">
+        <img src="/CSS/theimg.jpg" alt="Tutor Illustration" />
+      </div>
+
+      <div class="form-side">
+        <div class="toggle-group">
+          <button class="toggle-btn" onclick="showForm('tutor')">
+            Teacher
+          </button>
+          <button class="toggle-btn" onclick="showForm('query')">
+            Student
+          </button>
+        </div>
+
+        <div id="tutorForm" class="form-container">
+          <h2 class="form-title">Join as a Tutor</h2>
+          <form action="/neww" method="POST">
+            <!-- Tutor form fields -->
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              name="name"
+              required
+            />
+
+            <label for="subject">Subject:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="subject"
+              name="subject"
+              required
+            />
+
+            <label for="experience">Experience (in years):</label>
+            <input
+              type="number"
+              class="form-control"
+              id="experience"
+              name="experience"
+              required
+            />
+
+            <label for="email">Email Address:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              name="email"
+              required
+            />
+
+            <label for="photoUrl">Profile Picture URL:</label>
+            <input
+              type="url"
+              class="form-control"
+              id="photoUrl"
+              name="photoUrl"
+              required
+            />
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+
+        <div id="queryForm" class="form-container hidden">
+          <h2 class="form-title">Ask Query</h2>
+          <form id="askQueryForm" action="/register" method="POST">
+            <!-- Student form fields -->
+            <label for="qname">Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="qname"
+              name="name"
+              required
+            />
+
+            <label for="college">College Name:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="college"
+              name="college"
+              required
+            />
+
+            <label for="queries">Your Queries:</label>
+            <textarea
+              class="form-control"
+              id="queries"
+              name="queries"
+              required
+            ></textarea>
+
+            <label for="qemail">Email:</label>
+            <input
+              type="email"
+              class="form-control"
+              id="qemail"
+              name="email"
+              required
+            />
+
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="conta">
+      <section>
+        <h2>Why Choose Us?</h2>
+        <div class="features">
+          <div class="feature-card">
+            <h3>Expert Tutors</h3>
+            <p>Learn from experienced tutors dedicated to your success.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Flexible Schedules</h3>
+            <p>Enjoy learning plans tailored to your timetable.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Comprehensive Resources</h3>
+            <p>Access study materials and practice tests for every subject.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Interactive Learning</h3>
+            <p>
+              Engage in sessions that make learning enjoyable and effective.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function showForm(formName) {
+        document.getElementById("tutorForm").classList.add("hidden");
+        document.getElementById("queryForm").classList.add("hidden");
+        if (formName === "tutor") {
+          document.getElementById("tutorForm").classList.remove("hidden");
+        } else {
+          document.getElementById("queryForm").classList.remove("hidden");
+        }
+      }
+
+      document
+        .getElementById("askQueryForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const name = document.getElementById("qname").value;
+          const college = document.getElementById("college").value;
+          const queries = document.getElementById("queries").value;
+          const email = document.getElementById("qemail").value;
+
+          try {
+            const response = await fetch("http://localhost:8080/register", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ name, college, queries, email }),
+            });
+
+            if (response.ok) {
+              alert(
+                `Hello ${name}, your query has been submitted successfully.`
+              );
+              window.location.href = "/home";
+            } else {
+              const errorMessage = await response.text();
+              alert(`Error: ${errorMessage}`);
+            }
+          } catch (error) {
+            console.error("Error:", error);
+            alert("Failed to submit your query. Please try again later.");
+          }
+        });
+    </script>
+  </body>
+</html>

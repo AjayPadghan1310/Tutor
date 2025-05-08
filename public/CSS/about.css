@@ -1,0 +1,103 @@
+/* Container for content */
+.f-about {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading Styles */
+h2 {
+  font-size: 28px;
+  color: #000000;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Paragraph Styles */
+p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Unordered List Styles */
+ul {
+  list-style: none;
+  margin-left: 0;
+}
+
+ul li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #444;
+  padding-left: 20px;
+  position: relative;
+}
+
+ul li::before {
+  content: "•";
+  color: #1a73e8;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 30px;
+}
+
+/* Links Styling */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons or call to action */
+button {
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1558b0;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .f-about {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 14px;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+  }
+}

@@ -1,0 +1,20 @@
+/* Add this to your existing CSS file (style.css) */
+.sn {
+  background-color: #007bff; /* Button color */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.sn a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sn:hover {
+  background-color: #0056b3; /* Hover effect */
+}
